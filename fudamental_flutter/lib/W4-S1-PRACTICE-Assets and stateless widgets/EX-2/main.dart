@@ -69,7 +69,7 @@ enum Product {
   flutter(
     title: 'Flutter',
     description: 'the best mobile widget library',
-    image: "assets/flutter.png",
+    image: "assets/flut-er.png",
   ),
   firebase(
     title: 'Firebase',
