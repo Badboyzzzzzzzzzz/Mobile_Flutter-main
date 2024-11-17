@@ -15,7 +15,6 @@ void main() {
         body: const Padding(
           padding: EdgeInsets.all(30),
           child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
             child: Row(
               children: [
                 WeatherForecast(

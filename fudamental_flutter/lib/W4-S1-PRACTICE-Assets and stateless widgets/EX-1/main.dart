@@ -14,9 +14,19 @@ void main() {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          HobbyCard(hobbyICON: Icons.travel_explore, title: "Travelling",cardColor: Colors.green,),
-          SizedBox(height: 10,),
-          HobbyCard(hobbyICON: Icons.skateboarding, title: "Skating",cardColor: Color.fromARGB(255, 123, 186, 236),),
+          HobbyCard(
+            hobbyICON: Icons.travel_explore,
+            title: "Travelling",
+            cardColor: Colors.green,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          HobbyCard(
+            hobbyICON: Icons.skateboarding,
+            title: "Skating",
+            cardColor: Color.fromARGB(255, 123, 186, 236),
+          ),
         ],
       ),
     ),
@@ -24,7 +34,11 @@ void main() {
 }
 
 class HobbyCard extends StatelessWidget {
-  const HobbyCard({super.key, required this.hobbyICON, required this.title,required this.cardColor});
+  const HobbyCard(
+      {super.key,
+      required this.hobbyICON,
+      required this.title,
+      required this.cardColor});
   final String title;
   final IconData hobbyICON;
   final Color cardColor;
@@ -34,11 +48,15 @@ class HobbyCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
       decoration: BoxDecoration(
+        color: cardColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         children: [
-          Icon(hobbyICON,color: Colors.white,),
+          Icon(
+            hobbyICON,
+            color: Colors.white,
+          ),
           const SizedBox(width: 20),
           Text(
             title,

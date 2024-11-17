@@ -5,18 +5,18 @@ void main() => runApp(MaterialApp(
         appBar: AppBar(
           title: const Text("Custom buttons"),
         ),
-        body: Column(
+        body:const Column(
           children: [
             ButtonSelected(),
-            const SizedBox(
+           SizedBox(
               height: 10,
             ),
             ButtonSelected(),
-            const SizedBox(
+           SizedBox(
               height: 10,
             ),
             ButtonSelected(),
-            const SizedBox(
+           SizedBox(
               height: 10,
             ),
             ButtonSelected(),
@@ -26,6 +26,8 @@ void main() => runApp(MaterialApp(
     ));
 
 class ButtonSelected extends StatefulWidget {
+  const ButtonSelected({super.key});
+
   @override
   State<ButtonSelected> createState() => _MyButton();
 }

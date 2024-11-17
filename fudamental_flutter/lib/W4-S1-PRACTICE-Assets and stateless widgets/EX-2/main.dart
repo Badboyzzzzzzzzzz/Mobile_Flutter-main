@@ -15,7 +15,7 @@ void main() {
         backgroundColor: Colors.orange,
       ),
       body: const Padding(
-        padding: const EdgeInsets.all(40),
+        padding:  EdgeInsets.all(40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -69,7 +69,7 @@ enum Product {
   flutter(
     title: 'Flutter',
     description: 'the best mobile widget library',
-    image: "assets/flut-er.png",
+    image: "assets/flutter.png",
   ),
   firebase(
     title: 'Firebase',

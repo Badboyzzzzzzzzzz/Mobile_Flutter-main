@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomerCard extends StatelessWidget {
-  Color color;
-  String text;
-  CustomerCard({super.key, required this.color, required this.text});
+  final Color color;
+  final String text;
+  const CustomerCard({super.key, required this.color, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,9 @@ void main() {
   runApp(MaterialApp(
     home: Column(
       children: [
-        CustomerCard(color: const Color.fromARGB(255, 193, 219, 241), text: 'OOP'),
-        CustomerCard(color: const Color.fromARGB(255, 93, 172, 237), text: 'DART'),
-        CustomerCard(color: Colors.blue, text: 'FLUTTER'),
+        CustomerCard(color:  Colors.blue[100]!, text: 'OOP'),
+        CustomerCard(color:  Colors.blue[300]!, text: 'DART'),
+        CustomerCard(color: Colors.blue[600]!, text: 'FLUTTER'),
       ],
     ),
   ));
