@@ -56,17 +56,13 @@ class ProfileApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              SizedBox(
-                height: 500,
-                child: ListView.builder(
-                  itemCount: profileData.tiles.length,
-                  itemBuilder: (context, index) {
-                    final tile = profileData.tiles[index];
-                    return ProfileTile(
-                        icon: tile.icon, title: tile.title, data: tile.value);
-                  },
+              for (var tile in profileData.tiles)
+                ProfileTile(
+                  icon: tile.icon,
+                  title: tile.title,
+                  data: tile.value,
                 ),
-              )
+              
             ],
           ),
         ),
