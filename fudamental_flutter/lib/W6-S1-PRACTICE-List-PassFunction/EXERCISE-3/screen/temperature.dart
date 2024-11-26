@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Temperature extends StatelessWidget {
-  Temperature({super.key});
+  final VoidCallback back;
+  Temperature({super.key,required this.back});
 
   final BoxDecoration textDecoration = BoxDecoration(
     color: Colors.white,
@@ -48,7 +49,23 @@ class Temperature extends StatelessWidget {
           Container(
               padding: const EdgeInsets.all(10),
               decoration: textDecoration,
-              child: const Text('test'))
+              child: const Text('test')),
+          const SizedBox(height: 15),
+          
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 400),
+            child: OutlinedButton(
+             
+              onPressed: back,
+              style: OutlinedButton.styleFrom(
+                  side: const BorderSide(width: 1.0, color: Colors.white)),
+              child: const Text('Back to welcome Screen',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                  )),
+            ),
+          )
         ],
       )),
     );
