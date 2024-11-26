@@ -98,7 +98,6 @@ class ResultItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                
                 Text(
                   question.title,
                   style: const TextStyle(
@@ -113,7 +112,7 @@ class ResultItem extends StatelessWidget {
                   children: question.possibleAnswers.map((answer) {
                     Color answerColor;
                     if (answer == question.goodAnswer) {
-                      answerColor = Colors.blue; 
+                      answerColor = Colors.green; 
                     } else if (answer == userAnswer && !isCorrect) {
                       answerColor = Colors.red; 
                     } else {
