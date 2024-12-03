@@ -126,9 +126,6 @@ class ResultItem extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16.0,
                           color: answerColor,
-                          fontWeight: answerColor != Colors.black
-                              ? FontWeight.bold
-                              : FontWeight.normal,
                         ),
                       ),
                     );

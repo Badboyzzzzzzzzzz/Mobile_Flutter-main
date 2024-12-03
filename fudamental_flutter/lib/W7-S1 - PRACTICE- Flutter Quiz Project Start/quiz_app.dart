@@ -17,7 +17,7 @@ class QuizApp extends StatefulWidget {
 }
 
 class _QuizAppState extends State<QuizApp> {
-  QuizState quizState = QuizState.notStarted;
+  QuizState quizState = QuizState.not_started;
   int currentQuestionIndex = 0;
   Submission submission = Submission();
 
@@ -29,9 +29,9 @@ class _QuizAppState extends State<QuizApp> {
 
   void onRestart() {
     setState(() {
-      quizState = QuizState.notStarted;
+      quizState = QuizState.not_started;
       currentQuestionIndex = 0;
-      submission = Submission();
+      submission.removeAnswers();
     });
   }
 
@@ -53,7 +53,7 @@ class _QuizAppState extends State<QuizApp> {
     Widget screen;
 
     switch (quizState) {
-      case QuizState.notStarted:
+      case QuizState.not_started:
         screen = WelcomeScreen(
           onStart: () {
             onStart();
@@ -81,6 +81,7 @@ class _QuizAppState extends State<QuizApp> {
     }
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: appColor,
         body: screen,
@@ -90,7 +91,8 @@ class _QuizAppState extends State<QuizApp> {
 }
 
 enum QuizState {
-  notStarted,
+  // ignore: constant_identifier_names
+  not_started,
   started,
   finished,
 }

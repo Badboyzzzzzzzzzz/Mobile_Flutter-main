@@ -13,7 +13,4 @@ class Question {
 
   const Question({required this.title, required this.possibleAnswers, required this.goodAnswer});
 
-  get myQuestions => null;
-
-  get questions => null;
 }

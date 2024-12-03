@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fudamental_flutter/W8-S1/screens/expense-screen.dart';
 
- 
+import 'screens/expenses/expenses.dart';
 
 void main() {
   runApp(
