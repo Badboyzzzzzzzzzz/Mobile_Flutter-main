@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../models/expense.dart';
-  
+
 class ExpenseForm extends StatefulWidget {
   const ExpenseForm({super.key, required this.onSubmit});
   final Function(Expense) onSubmit;
@@ -18,6 +19,7 @@ class _ExpenseFormState extends State<ExpenseForm> {
   void dispose() {
     _titleController.dispose();
     _amountController.dispose();
+    _datepickerController.dispose();
     super.dispose();
   }
 
@@ -107,9 +109,9 @@ class _ExpenseFormState extends State<ExpenseForm> {
           TextField(
             controller: _amountController,
             keyboardType: TextInputType.number,
-            // inputFormatters: [
-            //   FilteringTextInputFormatter.digitsOnly,
-            // ],
+            inputFormatters: [
+              FilteringTextInputFormatter.digitsOnly,
+            ],
             decoration: const InputDecoration(
               label: Text('Amount'),
               prefixText: '\$',
